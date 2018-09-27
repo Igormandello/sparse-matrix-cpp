@@ -32,6 +32,21 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
+		<Unit filename="../avl-tree-cpp/avl-tree/AVLTree.cpp">
+			<Option target="Release" />
+		</Unit>
+		<Unit filename="../avl-tree-cpp/avl-tree/AVLTree.hpp" />
+		<Unit filename="../avl-tree-cpp/avl-tree/Node.cpp">
+			<Option target="Release" />
+		</Unit>
+		<Unit filename="../avl-tree-cpp/avl-tree/Node.hpp" />
+		<Unit filename="../avl-tree-cpp/avl-tree/main.cpp">
+			<Option target="Release" />
+		</Unit>
+		<Unit filename="SparseMatrix.cpp">
+			<Option target="Release" />
+		</Unit>
+		<Unit filename="SparseMatrix.hpp" />
 		<Unit filename="main.cpp" />
 		<Extensions>
 			<code_completion />
