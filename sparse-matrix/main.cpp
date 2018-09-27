@@ -1,9 +1,10 @@
 #include <iostream>
+#include "SparseMatrix.hpp";
 
 using namespace std;
 
 int main()
 {
-    cout << "Hello world!" << endl;
+    SparseMatrix<bool>* sm = new SparseMatrix<bool>();
     return 0;
 }
