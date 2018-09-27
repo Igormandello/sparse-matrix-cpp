@@ -1,0 +1,3 @@
+[submodule "avl-tree-cpp"]
+	path = avl-tree-cpp
+	url = https://github.com/Igormandello/avl-tree-cpp
