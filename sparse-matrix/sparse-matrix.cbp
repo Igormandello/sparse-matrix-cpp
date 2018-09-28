@@ -43,6 +43,10 @@
 		<Unit filename="../avl-tree-cpp/avl-tree/main.cpp">
 			<Option target="Release" />
 		</Unit>
+		<Unit filename="IndexedData.cpp">
+			<Option target="Release" />
+		</Unit>
+		<Unit filename="IndexedData.hpp" />
 		<Unit filename="SparseMatrix.cpp">
 			<Option target="Release" />
 		</Unit>
