@@ -13,3 +13,13 @@ template <class T>
 bool IndexedData<T>::operator<(const IndexedData<T>& a) {
     return this->index < a.index;
 }
+
+template <class T>
+bool IndexedData<T>::operator>(const IndexedData<T>& a) {
+    return this->index > a.index;
+}
+
+template <class T>
+bool IndexedData<T>::operator==(const IndexedData<T>& a) {
+    return this->index == a.index;
+}

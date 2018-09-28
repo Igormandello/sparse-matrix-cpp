@@ -10,7 +10,9 @@ class IndexedData {
     public:
         IndexedData(int, T);
         T getData();
+        bool operator>(const IndexedData<T>&);
         bool operator<(const IndexedData<T>&);
+        bool operator==(const IndexedData<T>&);
 
     private:
         int index;
