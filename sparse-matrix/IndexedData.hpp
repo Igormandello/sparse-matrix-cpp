@@ -10,12 +10,14 @@ class IndexedData {
     public:
         IndexedData();
         IndexedData(int);
-        IndexedData(int, T);
+        IndexedData(int, T*);
+        IndexedData(const IndexedData<T>&);
         T getData();
         bool operator>(const IndexedData<T>&);
         bool operator<(const IndexedData<T>&);
         bool operator==(const IndexedData<T>&);
-        ostream& operator<<(ostream&);
+        template <class U>
+        friend ostream& operator<<(ostream&, const IndexedData<U>&);
 
     private:
         int index;

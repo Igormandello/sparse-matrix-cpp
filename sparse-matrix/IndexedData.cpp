@@ -5,15 +5,21 @@ IndexedData<T>::IndexedData() {
 }
 
 template <class T>
-IndexedData<T>::IndexedData(int index, T data) {
+IndexedData<T>::IndexedData(int index, T* data) {
     this->index = index;
-    this->data = &data;
+    this->data = data;
 }
 
 template <class T>
 IndexedData<T>::IndexedData(int index) {
     this->index = index;
     this->data = NULL;
+}
+
+template <class T>
+IndexedData<T>::IndexedData(const IndexedData<T>& other) {
+    this->index = other.index;
+    this->data = other.data;
 }
 
 template <class T>
@@ -37,7 +43,7 @@ bool IndexedData<T>::operator==(const IndexedData<T>& a) {
 }
 
 template <class T>
-ostream& IndexedData<T>::operator<<(ostream &os) {
-    os << "a";
+ostream& operator<<(ostream &os, const IndexedData<T>& indexed) {
+    os << indexed.index << ":" << *indexed.data;
     return os;
 }

@@ -17,7 +17,7 @@ class SparseMatrix {
         bool contains(T);
 
     private:
-        AVLTree<IndexedData<AVLTree<IndexedData<T> > > >* rows;
+        AVLTree<IndexedData<AVLTree<IndexedData<T> > > > rows;
 };
 
 #include "SparseMatrix.cpp"
