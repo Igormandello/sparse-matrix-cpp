@@ -8,15 +8,18 @@ using namespace std;
 template <class T>
 class IndexedData {
     public:
+        IndexedData();
+        IndexedData(int);
         IndexedData(int, T);
         T getData();
         bool operator>(const IndexedData<T>&);
         bool operator<(const IndexedData<T>&);
         bool operator==(const IndexedData<T>&);
+        ostream& operator<<(ostream&);
 
     private:
         int index;
-        T data;
+        T* data;
 };
 
 #include "IndexedData.cpp"
