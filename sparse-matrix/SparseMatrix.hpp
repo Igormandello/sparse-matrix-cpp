@@ -15,6 +15,8 @@ class SparseMatrix {
         void remove(T);
         T get(int, int);
         bool contains(T);
+        template <class U>
+        friend ostream& operator<<(ostream&, const SparseMatrix<U>&);
 
     private:
         AVLTree<IndexedData<AVLTree<IndexedData<T> > > > rows;

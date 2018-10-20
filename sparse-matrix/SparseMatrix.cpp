@@ -3,7 +3,8 @@ SparseMatrix<T>::SparseMatrix() {}
 
 template <class T>
 void SparseMatrix<T>::add(int row, int col, T info) {
-    IndexedData<T> data (col, &info);
+    T* infoClone = new T(info);
+    IndexedData<T> data (col, infoClone);
 
     IndexedData<AVLTree<IndexedData<T> > > testData (row);
     IndexedData<AVLTree<IndexedData<T> > > *rowNode = this->rows.get(testData);
@@ -18,7 +19,6 @@ void SparseMatrix<T>::add(int row, int col, T info) {
 
         IndexedData<AVLTree<IndexedData<T> > > rowNode(row, colTree);
         this->rows.add(rowNode);
-        cout << this->rows;
     }
 }
 
@@ -43,4 +43,9 @@ T SparseMatrix<T>::get(int row, int col) {
 template <class T>
 bool SparseMatrix<T>::contains(T info) {
     return false;
+}
+
+template <class T>
+ostream& operator<<(ostream& os, const SparseMatrix<T>& sm) {
+    os << sm.rows;
 }
