@@ -44,6 +44,13 @@ T SparseMatrix<T>::get(int row, int col) {
 
 template <class T>
 bool SparseMatrix<T>::contains(int row, int col) {
+  IndexedData<AVLTree<IndexedData<T> > >* rowNode = this->rows.get(row);
+  if (rowNode != NULL) {
+    IndexedData<T>* colNode = rowNode->getData().get(col);
+    if (colNode != NULL)
+      return true
+  }
+
   return false;
 }
 
