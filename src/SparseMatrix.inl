@@ -26,7 +26,12 @@ void SparseMatrix<T>::add(int row, int col, T info) {
 
 template <class T>
 void SparseMatrix<T>::remove(int row, int col) {
-  
+  IndexedData<AVLTree<IndexedData<T> > >* rowNode = this->rows.get(row);
+  if (rowNode != NULL) {
+    IndexedData<T>* colNode = rowNode->getData().get(col);
+    if (colNode != NULL)
+      rowNode->getData().remove(*colNode);
+  }
 }
 
 template <class T>
@@ -48,7 +53,7 @@ bool SparseMatrix<T>::contains(int row, int col) {
   if (rowNode != NULL) {
     IndexedData<T>* colNode = rowNode->getData().get(col);
     if (colNode != NULL)
-      return true
+      return true;
   }
 
   return false;
