@@ -1,5 +1,7 @@
 template <class T>
-SparseMatrix<T>::SparseMatrix() {}
+SparseMatrix<T>::SparseMatrix(T defaultInfo) {
+  this->defaultInfo = *new T(defaultInfo);
+}
 
 template <class T>
 void SparseMatrix<T>::add(int row, int col, T info) {
@@ -33,9 +35,9 @@ T SparseMatrix<T>::get(int row, int col) {
     if (colNode != NULL)
       return colNode->getData();
     else
-      return NULL;
+      return *new T(defaultInfo);
   } else
-    return NULL;
+    return *new T(defaultInfo);
 }
 
 template <class T>

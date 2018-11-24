@@ -10,7 +10,7 @@ using namespace std;
 template <class T>
 class SparseMatrix {
   public:
-    SparseMatrix();
+    SparseMatrix(T);
     void add(int, int, T);
     void remove(T);
     T get(int, int);
@@ -20,6 +20,7 @@ class SparseMatrix {
 
   private:
     AVLTree<IndexedData<AVLTree<IndexedData<T>>>> rows;
+    T defaultInfo;
 };
 
 #include "SparseMatrix.inl"
