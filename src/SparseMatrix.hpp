@@ -8,8 +8,7 @@
 using namespace std;
 
 template <class T>
-class SparseMatrix
-{
+class SparseMatrix {
   public:
     SparseMatrix();
     void add(int, int, T);

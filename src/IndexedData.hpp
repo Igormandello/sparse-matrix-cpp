@@ -6,12 +6,11 @@
 using namespace std;
 
 template <class T>
-class IndexedData
-{
+class IndexedData {
   public:
     IndexedData();
     IndexedData(int);
-    IndexedData(int, T *);
+    IndexedData(int, T*);
     IndexedData(const IndexedData<T> &);
     T getData();
     bool operator>(const IndexedData<T> &);
@@ -22,7 +21,7 @@ class IndexedData
 
   private:
     int index;
-    T *data;
+    T* data;
 };
 
 #include "IndexedData.inl"
