@@ -2,7 +2,7 @@
 #define SPARSE_MATRIX_INCLUDED
 
 #include <iostream>
-#include "../avl-tree-cpp/avl-tree/AVLTree.hpp"
+#include "../avl-tree-cpp/src/AVLTree.hpp"
 #include "IndexedData.hpp"
 
 using namespace std;
