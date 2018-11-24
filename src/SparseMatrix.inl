@@ -25,7 +25,9 @@ void SparseMatrix<T>::add(int row, int col, T info) {
 }
 
 template <class T>
-void SparseMatrix<T>::remove(T info) {}
+void SparseMatrix<T>::remove(int row, int col) {
+  
+}
 
 template <class T>
 T SparseMatrix<T>::get(int row, int col) {
@@ -41,7 +43,7 @@ T SparseMatrix<T>::get(int row, int col) {
 }
 
 template <class T>
-bool SparseMatrix<T>::contains(T info) {
+bool SparseMatrix<T>::contains(int row, int col) {
   return false;
 }
 

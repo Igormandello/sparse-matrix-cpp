@@ -12,9 +12,9 @@ class SparseMatrix {
   public:
     SparseMatrix(T);
     void add(int, int, T);
-    void remove(T);
+    void remove(int, int);
     T get(int, int);
-    bool contains(T);
+    bool contains(int, int);
     template <class U>
     friend ostream &operator<<(ostream &, const SparseMatrix<U> &);
 
