@@ -5,6 +5,11 @@ SparseMatrix<T>::SparseMatrix(T defaultInfo) {
 
 template <class T>
 void SparseMatrix<T>::add(int row, int col, T info) {
+  if (info == this->defaultInfo) {
+    this->remove(row, col);
+    return;
+  }
+
   T* infoClone = new T(info);
   IndexedData<T> data(col, infoClone);
 

@@ -12,7 +12,6 @@ class SparseMatrix {
   public:
     SparseMatrix(T);
     void add(int, int, T);
-    void remove(int, int);
     T get(int, int);
     bool contains(int, int);
     template <class U>
@@ -21,6 +20,7 @@ class SparseMatrix {
   private:
     AVLTree<IndexedData<AVLTree<IndexedData<T>>>> rows;
     T defaultInfo;
+    void remove(int, int);
 };
 
 #include "SparseMatrix.inl"
