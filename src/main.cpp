@@ -16,7 +16,7 @@ int main() {
   cout << sm->get(1, 2) << endl;
   cout << sm->get(1, 4) << endl << endl;
 
-  sm->remove(1, 3);
+  sm->add(1, 3, '.');
   cout << *sm << endl;
   cout << sm->contains(1, 3) << endl;
   cout << sm->get(1, 3) << endl;
