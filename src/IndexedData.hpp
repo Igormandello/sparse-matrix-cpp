@@ -12,7 +12,7 @@ class IndexedData {
     IndexedData(int);
     IndexedData(int, T*);
     IndexedData(const IndexedData<T> &);
-    T getData();
+    T* getData();
     bool operator>(const IndexedData<T> &);
     bool operator<(const IndexedData<T> &);
     bool operator==(const IndexedData<T> &);

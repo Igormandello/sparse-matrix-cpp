@@ -23,8 +23,8 @@ IndexedData<T>::IndexedData(const IndexedData<T>& other) {
 }
 
 template <class T>
-T IndexedData<T>::getData() {
-  return *this->data;
+T* IndexedData<T>::getData() {
+  return this->data;
 }
 
 template <class T>
