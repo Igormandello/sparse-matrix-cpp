@@ -17,9 +17,10 @@ void SparseMatrix<T>::add(int row, int col, T info) {
   IndexedData<AVLTree<IndexedData<T> > >* rowNode = this->rows.get(testData);
   if (rowNode != NULL) {
     IndexedData<T>* colNode = rowNode->getData()->get(col);
-    if (colNode == NULL) {
-      rowNode->getData()->add(data);
-    }
+    if (colNode != NULL)
+      rowNode->getData()->remove(data);
+    
+    rowNode->getData()->add(data);
   } else {
     AVLTree<IndexedData<T> >* colTree = new AVLTree<IndexedData<T> >();
     colTree->add(data);

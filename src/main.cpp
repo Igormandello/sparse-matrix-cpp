@@ -8,8 +8,8 @@ int main() {
   sm->add(1, 2, 'a');
   sm->add(1, 1, 'b');
   sm->add(1, 3, 'c');
-  sm->add(1, 0, 'b');
-  sm->add(2, 3, 'd');
+  sm->add(1, 0, 'd');
+  sm->add(2, 3, 'e');
 
   cout << *sm << endl;
   cout << sm->contains(1, 3) << endl;
@@ -18,6 +18,7 @@ int main() {
 
   sm->add(1, 3, '.');
   sm->add(2, 3, '.');
+  sm->add(1, 0, 'f');
   cout << *sm << endl;
   cout << sm->contains(1, 3) << endl;
   cout << sm->get(1, 3) << endl;
